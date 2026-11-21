@@ -2,32 +2,17 @@
 
 int main() {
     int numeros[100];
-    int n, i;
-    int positivos = 0;
-    int negativos = 0;
-    int nulos = 0;
+    int i;
 
-    printf("Cuantos numeros ingresaras: ");
-    scanf("%d", &n);
-
-    for (i = 0; i < n; i++) {
-        printf("Ingresa un numero: ");
-        scanf("%d", &numeros[i]);
-
-        if (numeros[i] > 0) {
-            positivos++;
-        }
-        else if (numeros[i] < 0) {
-            negativos++;
-        }
-        else {
-            nulos++;
-        }
+    for (i = 0; i < 100; i++) {
+        numeros[i] = (i + 1) * 2;
     }
 
-    printf("Positivos: %d\n", positivos);
-    printf("Negativos: %d\n", negativos);
-    printf("Nulos: %d\n", nulos);
+    printf("Los primeros 100 numeros pares son:\n");
+
+    for (i = 0; i < 100; i++) {
+        printf("%d ", numeros[i]);
+    }
 
     return 0;
 }
